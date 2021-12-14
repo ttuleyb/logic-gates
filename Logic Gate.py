@@ -54,6 +54,9 @@ def converttoboolean(a):
             a = True
         elif a == "false":
             a = False
+        else:
+            print("Invalid value:" + a)
+            exit()
     return a
 
 
@@ -66,5 +69,7 @@ B = converttoboolean(B)
 result = operations(gateselected, A, B)
 if result == True:
     print(1)
-else:
+elif result == False:
     print(0)
+else:
+    print("Invalid Gate Selected, Please Try: AND, OR, XOR, NAND or NOR gate.")
